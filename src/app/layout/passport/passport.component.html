@@ -1,0 +1,19 @@
+<div class="passport-top" nz-row nzType="flex" nzAlign="middle">
+  <div nz-col>
+    <img
+      class="collapsed"
+      src="{{ settings.app.logo }}"
+      alt="{{ settings.app.name }}"
+      height="48px"
+      *ngIf="settings.app.logo === ''"
+    />
+  </div>
+  <div nz-col style="padding-left: 12px;font-size: 16px;">
+    {{ settings.app.passport_name || 'dg-cli模板' }}
+  </div>
+</div>
+<div class="passport-bottom-container">
+  <div class="passport-bottom">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "dg-cli模板"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/img/default-user.png"
+  },
+  "menu": [
+    {
+      "group": true,
+      "text": "功能中心",
+      "children": [
+        {
+          "text": "用户管理",
+          "group": true,
+          "icon": "anticon-form",
+          "hideInBreadcrumb": true,
+          "children": [
+            {
+              "text": "用户列表",
+              "link": "/user/center",
+              "icon": "anticon-dashboard"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

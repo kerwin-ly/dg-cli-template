@@ -1,0 +1,13 @@
+<!-- <div *ngIf="isSpin" class="global-spin-l" style="margin-left: 200px;"> -->
+<div *ngIf="isSpin" class="global-spin-l">
+  <ng-template #spinTemplate>
+    <i nz-icon nzType="loading" nzTheme="outline" [ngStyle]="{ 'font-size': size + 'px' }"></i>
+  </ng-template>
+  <nz-spin
+    class="global-spin-l"
+    [ngStyle]="{ width: size + 'px', height: size + 'px', left: '8%' }"
+    [nzIndicator]="spinTemplate"
+    [nzSpinning]="isSpin"
+  >
+  </nz-spin>
+</div>

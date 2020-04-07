@@ -1,0 +1,110 @@
+// 主题色调整
+@primary-color: #108cee;
+// body背景色调整
+@body-background: #f6f7fa !important;
+// 字体文件设置
+@icon-url: '/assets/fonts/font_148784_v4ggb6wrjmkotj4i';
+// 所有的radius都清空
+@border-radius-base: 0;
+// btn的padding值调整
+@btn-padding-base: 0 @padding-md;
+// table
+@table-header-bg: #f6f7fb;
+// card
+@card-head-padding: 10px;
+// header设置
+@alain-default-header-hg: 60px;
+@alain-default-header-padding: 0;
+@alain-default-header-bg: #fff;
+// 主体内容padding
+@alain-default-content-padding: 12px;
+// 侧边栏设置
+@alain-default-aside-bg: #101a33;
+@alain-default-aside-nav-text-color: #bbc8d9;
+@alain-default-aside-nav-text-hover-color: #fff;
+@alain-default-aside-nav-selected-text-color: #fff;
+@alain-default-aside-nav-group-text-color: #bbc8d9;
+@alain-default-aside-nav-selected-bg: #152141;
+
+/* ==== 以下为兼容整体风格，不得不做调整 ===== */
+
+// reuse-tab样式调整
+.ad-rt.fixed {
+  padding: 0 8px;
+  border-top: 1px solid #d4d9e3;
+
+  .ant-tabs-nav .ant-tabs-tab .op {
+    top: 22px;
+  }
+}
+
+.ant-tabs-ink-bar {
+  bottom: 2px;
+}
+
+.ant-tabs-nav-container {
+  line-height: 37px;
+}
+
+// header样式调整
+.alain-default__header {
+  color: #8d99b0;
+  box-shadow: none;
+}
+
+.alain-default__header {
+  // margin-left: 200px;
+}
+
+.alain-default__nav {
+  .alain-default__nav-item,
+  nz-badge {
+    color: #8d99b0 !important;
+  }
+
+  .item.toogle-item {
+    color: #0e1a35 !important;
+  }
+}
+
+.alain-default__fixed .alain-default__content {
+  margin-top: 72px;
+}
+
+.logo-holder {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: #121a2c;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+}
+
+// sidebar侧边栏
+.alain-default__aside {
+  margin-top: 0 !important;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+
+  &::after {
+    border: none;
+  }
+}
+
+// drawer抽屉
+.ant-drawer {
+  .ant-drawer-header {
+    background-color: rgba(240, 246, 250, 0.5); // background: rgb(250, 252, 253);
+  }
+
+  .ant-drawer-body {
+    padding-bottom: 0;
+  }
+
+  .ant-drawer-body .content-container {
+    max-height: calc(~'100vh - 146px');
+    overflow-y: auto;
+
+    & + div {
+      margin-top: 20px;
+    }
+  }
+}

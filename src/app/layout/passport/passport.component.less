@@ -1,0 +1,29 @@
+@import '~@delon/theme/styles/default';
+:host {
+  ::ng-deep {
+    .passport-top {
+      left: 0;
+      right: 0;
+      position: fixed;
+      padding: 8px 4%;
+      color: #fff;
+      background: #0e0f30;
+      z-index: 2;
+    }
+    .passport-bottom-container {
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: relative;
+      background: url('../../../assets/img/login-bg.png') 0 0 / cover no-repeat;
+      .passport-bottom {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

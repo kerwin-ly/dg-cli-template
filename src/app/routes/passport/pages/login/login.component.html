@@ -1,0 +1,47 @@
+<div class="login-form-container" nz-row nzType="flex" nzJustify="center">
+  <div class="login-img" nz-col>
+    <img src="../../../../assets/img/login-left.png" alt="达观科技-Login" />
+  </div>
+  <div class="login-form" nz-col>
+    <div nz-row nzType="flex" nzAlign="middle" nzJustify="center" style="height: 100%;">
+      <div nz-col nzSpan="20">
+        <form nz-form [formGroup]="form" (ngSubmit)="submit()" role="form">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="请输入账户名">
+              <nz-input-group nzSize="large" nzPrefixIcon="anticon anticon-user">
+                <input nz-input formControlName="userName" placeholder="{{ '请输入账号' }}" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="密码不少于5位">
+              <nz-input-group nzSize="large" nzPrefixIcon="anticon anticon-lock">
+                <input
+                  nz-input
+                  type="password"
+                  formControlName="password"
+                  placeholder="{{ '请输入登录密码' }}"
+                  autocomplete
+                />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item style="padding-top: 1vw;margin-bottom: 0;">
+            <div>
+              <button
+                nz-button
+                type="submit"
+                [nzLoading]="loading"
+                nzType="primary"
+                nzSize="large"
+                style="width: 100%;"
+              >
+                {{ '登录' }}
+              </button>
+            </div>
+          </nz-form-item>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
