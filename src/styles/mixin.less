@@ -1,0 +1,93 @@
+@import './variable.less';
+
+// 文本超出省略号
+.text-overflow(@width: 100%) {
+  display: inline-block;
+  max-width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 按钮设置
+.basic-button(@bg, @br, @co: #F9FCFD) {
+  color: @co !important;
+  background-color: @bg !important;
+  border-color: @br !important;
+}
+
+.grey-button {
+  .basic-button(@kg-btn-grey, @kg-btn-grey);
+}
+
+.green-button() {
+  .basic-button(@kg-btn-green, @kg-btn-green);
+}
+
+.green-transparent-button() {
+  .basic-button(transparent, transparent, #5ffff8);
+}
+
+.default-button() {
+  button.ant-btn-default {
+    .grey-button();
+  }
+}
+
+// 背景色
+.kg-background() {
+  background-color: @body-background !important;
+}
+
+// 文字颜色
+.kg-text-color() {
+  color: @kg-text-color !important;
+}
+
+// table组件
+.tech-table {
+  nz-table {
+    background-color: @kg-color-11 !important;
+    .default-button();
+  }
+  th {
+    color: @kg-color-10 !important;
+    background-color: @kg-color-11 !important;
+  }
+
+  td {
+    color: @kg-color-10 !important;
+  }
+
+  .ant-table-tbody {
+    background-color: @kg-color-2 !important;
+  }
+
+  .ant-table-thead > tr.ant-table-row-hover td,
+  .ant-table-tbody > tr.ant-table-row-hover td,
+  .ant-table-thead > tr:hover td,
+  .ant-table-tbody > tr:hover td {
+    background: @kg-color-6 !important;
+  }
+
+  .ant-table-placeholder {
+    background-color: @kg-color-2;
+    border: none;
+  }
+
+  .ant-table-thead > tr > th {
+    border: none;
+    border-bottom: 0 !important;
+  }
+  .ant-table-tbody > tr > td {
+    border-bottom-color: #536489;
+    a {
+      color: #f5222d !important;
+    }
+  }
+  .ant-table-content {
+    a:not(.delete-button) {
+      color: #f5222d !important;
+    }
+  }
+}

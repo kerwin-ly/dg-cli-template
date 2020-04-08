@@ -1,23 +1,16 @@
 {
+  "printWidth": 120,
   "singleQuote": true,
-  "useTabs": false,
-  "printWidth": 140,
-  "tabWidth": 2,
   "semi": true,
-  "arrowParens": "avoid",
-  "bracketSpacing": true,
-  "proseWrap": "preserve",
+  "stylelintIntegration": true,
+  "tabWidth": 2,
+  "useTabs": true,
+  "proseWrap": "never",
   "overrides": [
     {
       "files": ".prettierrc",
       "options": {
         "parser": "json"
-      }
-    },
-    {
-      "files": "*.html",
-      "options": {
-        "printWidth": 100
       }
     }
   ]
