@@ -1,6 +1,7 @@
 {
   "name": "atlas-prod",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "dg-cli template",
   "scripts": {
     "ng": "ng",
     "start": "npm run color-less && ng serve -o --port=4400 --proxy-config proxy.config.json",
