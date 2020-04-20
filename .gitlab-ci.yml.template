@@ -8,16 +8,16 @@ variables:
   # $DOCKER_USER $DOCKER_PWD 在settings CI/CD中的Secret variables配置，如果是protected表示保护分支有效
   DEV_TAG: develop
   PROD_TAG: release
-  REPO: dockerhub.datagrand.com/datagrand/rpa-assist-frontend
-  PROJECT_REPO_NAMESPACE: liyi
-  PROJECT_REPO_NAME: rpa-assist-frontend
+  REPO: <DOCKER_IMAGES_ADDRESS> # docker镜像地址
+  GIT_PROJECT_ADDRESS: <GIT_PROJECT_ADDRESS> # 项目地址，如：ssh://git@git.xxx.com:40001/group/myProject.git
+  PROJECT_REPO_NAME: <GIT_PROJECT_NAME> # 项目名，如：myProject
 
 before_script:
-  - docker login -u $RPA_ASSIST_USER -p $RPA_ASSIST_PWD http://dockerhub.datagrand.com
+  - docker login -u $<DOCKER_USER> -p $<DOCKER_PWD> <DOCKER_LOGIN_URL> # 对应项目CI/CD的settings中Secret variables添加DOCKER_USER, DOCKER_PWD变量，并确保变量名唯一。
   - mkdir $PROJECT_REPO_NAME
   - cd $PROJECT_REPO_NAME
   - git init
-  - git remote add origin ssh://git@git.datagrand.com:58422/$PROJECT_REPO_NAMESPACE/$PROJECT_REPO_NAME.git
+  - git remote add origin $GIT_PROJECT_ADDRESS
   - git fetch --depth=1 origin $CI_COMMIT_SHA
   - git reset --hard FETCH_HEAD
   - export DATE=$(date +%Y%m%d)
