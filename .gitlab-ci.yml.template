@@ -36,6 +36,7 @@ build:
 # test
 test:
   stage: test
+  when: manual
   script:
     - sh build/test.sh $REPO:${DEV_TAG}_${TAG_SUFFIX}
   allow_failure: false
