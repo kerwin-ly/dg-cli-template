@@ -9,38 +9,6 @@
 ### 项目结构
 ```
 .
-├── app                               (项目源码)
-│   ├── app.module.ts                 (app根模块)
-│   ├── core                          (app核心模块，包含拦截器，启动模块等)
-│   ├── delon.module.ts
-│   ├── layout                        (布局模块)
-│   ├── routes                        (路由模块，放置业务逻辑)
-│   └── shared                        (通用组件加载模块)
-├── assets                            (静态资源)
-├── browserslist
-├── environments                      (环境变量目录)
-│   ├── environment.hmr.ts
-│   ├── environment.prod.ts
-│   └── environment.ts
-├── favicon.ico
-├── hmr.ts
-├── index.html                        (入口页面)
-├── karma.conf.js
-├── main.ts                           (ts入口模块)
-├── polyfills.ts
-├── style-icons-auto.ts
-├── style-icons.ts
-├── styles                            (全局样式目录)
-│   ├── index.less
-│   └── theme.less
-├── styles.less
-├── test.ts
-├── tsconfig.app.json                 (tsconfig配置)
-├── tsconfig.spec.json
-├── tslint.json                       (tslint配置)
-└── typings.d.ts
-
-.
 ├── _mock                                                 (mock数据)
 ├── angular.json                                          (angular配置项)
 ├── build                                                 (CI/CD脚本)
