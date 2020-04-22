@@ -1,24 +1,21 @@
-## 项目说明
-rpa辅助系统
-
-## 项目介绍
+# dg-cli-template
+>基于[ng-alain](https://ng-alain.com/docs/getting-started/en)快速生成自定义项目模板。
 
 ### 项目启动
 * `安装依赖`: 进入项目根目录, 执行`npm i`
-* `本地测试`: 进入项目根目录，执行`npm start`
+* `本地开发`: 进入项目根目录，执行`npm start`
 * `打包部署`: 进入项目根目录，执行`npm run build`可对代码进行打包。
-* `建信打包`: 进入项目根目录，执行`npm run build:pjf`可对代码进行打包，注意**index.html需引入pjf相关框架**
 
 ### 项目结构
 ```
 .
 ├── app                               (项目源码)
-│   ├── app.module.ts                   (app根模块)
-│   ├── core                            (app核心模块，包含拦截器，启动模块等)
+│   ├── app.module.ts                 (app根模块)
+│   ├── core                          (app核心模块，包含拦截器，启动模块等)
 │   ├── delon.module.ts
-│   ├── layout                          (布局模块)
-│   ├── routes                          (路由模块，放置业务逻辑)
-│   └── shared                          (通用组件加载模块)
+│   ├── layout                        (布局模块)
+│   ├── routes                        (路由模块，放置业务逻辑)
+│   └── shared                        (通用组件加载模块)
 ├── assets                            (静态资源)
 ├── browserslist
 ├── environments                      (环境变量目录)
@@ -42,27 +39,58 @@ rpa辅助系统
 ├── tsconfig.spec.json
 ├── tslint.json                       (tslint配置)
 └── typings.d.ts
+
+.
+├── _mock                                                 (mock数据)
+├── angular.json                                          (angular配置项)
+├── build                                                 (CI/CD脚本)
+├── commitlint.config.js
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+├── proxy.config.json                                     (代理配置)
+├── scripts
+├── src
+│   ├── app                                               (项目源码)
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts                                 (app根模块)
+│   │   ├── core                                          (app核心模块，包含拦截器，启动模块等)
+│   │   ├── delon.module.ts                               (delon根模块)
+│   │   ├── layout                                        (布局模块)
+│   │   ├── routes                                        (路由模块，业务逻辑)
+│   │   │   ├── passport
+│   │   │   └── business                                  (业务模块，注意添加pages, components, services文件夹)
+│   │   │       ├── pages                                 (业务页面)
+│   │   │       ├── service                               (业务服务)
+│   │   │       ├── components                            (业务组件)
+│   │   │       ├── business-routing.module.ts
+│   │   │       └── business.module.ts
+│   │   └── shared                                        (共享模块)
+│   │       ├── api                                       (api请求)
+│   │       ├── components                                (公共组件)
+│   │       ├── index.ts
+│   │       ├── interfaces                                (公共接口)
+│   │       ├── json-schema
+│   │       ├── shared.module.ts
+│   │       └── utils                                     (工具类)
+│   ├── assets                                            (静态文件)
+│   ├── environments                                      (环境变量)
+│   ├── favicon.ico
+│   ├── hmr.ts
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── style-icons-auto.ts
+│   ├── style-icons.ts
+│   ├── styles                                            (全局样式)
+│   ├── styles.less
+│   ├── test.ts
+│   └── typings.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+└── tslint.json
+
 ```
 
 ### 开发规范
-
-#### 页面结构
-* 请参考`src/app/routes/bi`模块构建，拿`bi模块`举例
-```
-/bi
-  /pages       (路由页面) 
-  /components  (组件)
-  /services    (数据服务)
-  ...
-```
-
-#### git提交规范
-[前端协作约定](https://git.datagrand.com/frontend_utils/fe-conventions)**务必细读第2，3，4条**
-
-### docker封装
-docker目录存放的关于docker操作的常用命令，我们在进入docker目录后，执行`sh build_image.sh`进行打包
-待补充
-
-### CI/CD
-`.gitlab-ci.yml`配置
-
+详见[风格指南](https://angular.cn/guide/styleguide)
