@@ -40,6 +40,7 @@
     "@delon/util": "^8.9.2",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@types/lodash": "^4.14.150",
     "ajv": "^6.10.2",
     "lodash": "^4.17.15",
     "ng-alain": "^8.9.2",
