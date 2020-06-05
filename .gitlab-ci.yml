@@ -8,12 +8,12 @@ variables:
   # $DOCKER_USER $DOCKER_PWD 在settings CI/CD中的Secret variables配置，如果是protected表示保护分支有效
   DEV_TAG: develop
   PROD_TAG: release
-  REPO: <DOCKER_IMAGES_ADDRESS> # docker镜像地址
-  GIT_PROJECT_ADDRESS: <GIT_PROJECT_ADDRESS> # 项目地址，如：ssh://git@git.xxx.com:40001/group/myProject.git
-  PROJECT_REPO_NAME: <GIT_PROJECT_NAME> # 项目名，如：myProject
+  REPO: {{ dockerRepositoryUrl }} # docker镜像地址
+  GIT_PROJECT_ADDRESS: {{ gitRepositoryUrl }} # 项目地址，如：ssh://git@git.xxx.com:40001/group/myProject.git
+  PROJECT_REPO_NAME: {{ projectName }} # 项目名，如：myProject
 
 before_script:
-  - docker login -u $<DOCKER_USER> -p $<DOCKER_PWD> <DOCKER_LOGIN_URL> # 对应项目CI/CD的settings中Secret variables添加DOCKER_USER, DOCKER_PWD变量，并确保变量名唯一。
+  - docker login -u ${{ dockerUser }} -p ${{ dockerPassword }} {{ dockerLoginUrl }} # 对应项目CI/CD的settings中Secret variables添加DOCKER_USER, DOCKER_PWD变量，并确保变量名唯一。
   - mkdir $PROJECT_REPO_NAME
   - cd $PROJECT_REPO_NAME
   - git init
